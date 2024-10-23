@@ -1,0 +1,110 @@
+java code 
+public class Multiply {
+
+    public static void main(String[] args) {
+        double num1 = 10.0; // First number
+        double num2 = 5.0;  // Second number
+
+        double product = num1 * num2; // Multiply the two numbers
+        System.out.println("Product: " + product);
+    }
+}
+
+
+java input parameters
+
+number1 = float(input("Enter the first number: "))
+number2 = float(input("Enter the second number: "))
+result = number1 + number2
+print("The sum is:", result)
+
+public class Addition {
+    public static void main(String[] args) {
+        // Check if two arguments are provided
+        if (args.length < 2) {
+            System.out.println("Please provide two numbers as arguments.");
+            return;
+        }
+
+        // Parse the input numbers
+        double number1 = Double.parseDouble(args[0]);
+        double number2 = Double.parseDouble(args[1]);
+
+        // Add the numbers
+        double result = number1 + number2;
+
+        // Print the result
+        System.out.println("The sum is: " + result);
+    }
+}
+pipeline code for java input 
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'NUMBER1', defaultValue: '5', description: 'First number')
+        string(name: 'NUMBER2', defaultValue: '3', description: 'Second number')
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                // Compile the Java program
+                sh 'javac Addition.java'
+            }
+        }
+        stage('Run') {
+            steps {
+                // Run the Java program with parameters
+                sh "java Addition ${params.NUMBER1} ${params.NUMBER2}"
+            }
+        }
+    }
+}
+
+
+python input
+
+import sys
+
+# Check if two arguments are provided
+if len(sys.argv) < 3:
+    print("Please provide two numbers as arguments.")
+    sys.exit(1)
+
+# Parse the input numbers
+number1 = float(sys.argv[1])
+number2 = float(sys.argv[2])
+
+# Add the numbers
+result = number1 + number2
+
+# Print the result
+print("The sum is:", result)
+
+pipeline code 
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'NUMBER1', defaultValue: '5', description: 'First number')
+        string(name: 'NUMBER2', defaultValue: '3', description: 'Second number')
+    }
+
+    stages {
+        stage('Install Python') {
+            steps {
+                // Ensure Python is installed (if needed)
+                sh 'python3 --version || sudo apt-get install python3'
+            }
+        }
+        stage('Run') {
+            steps {
+                // Run the Python program with parameters
+                sh "python3 add.py ${params.NUMBER1} ${params.NUMBER2}"
+            }
+        }
+    }
+}
+
+

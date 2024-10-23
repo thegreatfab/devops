@@ -1,0 +1,227 @@
+python
+@echo off
+
+:: Get the values of the parameters
+set /a num1=%NUM1%
+set /a num2=%NUM2%
+
+:: Function to add two numbers
+set /a result=num1 + num2
+
+:: Display the result
+echo The sum of %num1% and %num2% is: %result%
+
+
+
+
+# Define two known numbers
+num1 = 10
+num2 = 20
+
+# Add the numbers
+result = num1 + num2
+
+# Display the result
+print("The sum of", num1, "and", num2, "is:", result)
+
+
+
+
+
+
+public class AdditionExample {
+    public static void main(String[] args) {
+        // Declare two known values
+        int num1 = 10;
+        int num2 = 20;
+        
+        // Calculate the sum
+        int sum = num1 + num2;
+        
+        // Print the result
+        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+java 
+
+@echo off
+
+:: Create the AddNumbers.java file with the Java code
+echo public class AddNumbers {^
+    public static int add(int a, int b) { return a + b; }^
+    public static void main(String[] args) {^
+        int num1 = Integer.parseInt(args[0]);^
+        int num2 = Integer.parseInt(args[1]);^
+        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + add(num1, num2));^
+    }^
+} > AddNumbers.java
+
+:: Compile the Java code
+javac AddNumbers.java
+
+:: Run the compiled class with NUM1 and NUM2 as inputs
+java AddNumbers %NUM1% %NUM2%
+
+
+
+
+
+CODE
+public class AddNumbers {
+
+    // Function to add two numbers
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        // Parse the input arguments (NUM1 and NUM2) from Jenkins parameters
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
+
+        // Call the function to add the numbers
+        int result = add(num1, num2);
+
+        // Print the result
+        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + result);
+    }
+}
+
+
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PIPELINE
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    }
+}
+
+
+
+
+
+

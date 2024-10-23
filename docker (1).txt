@@ -1,0 +1,26 @@
+# script.py
+print("Hello, Docker!")
+
+
+import math
+print(math.sqrt(16))
+
+
+
+
+docker run -it --name my_ubuntu_container ubuntu
+
+
+
+
+docker run -it --name my_python_container python
+
+
+docker run -it --name my_java_container openjdk
+docker rename old_container_name new_container_name
+docker rm my_container_name
+docker rmi image_name
+docker stop my_container_name
+docker pull openjdk
+docker run -it --name lucid_napier openjdk
+System.out.println("Hello from Docker!");
