@@ -1,0 +1,38 @@
+1  pwd
+    2  cd project
+    3  touch a
+        touch b
+        ls
+    4  git init           // to create local repository
+    5  git status
+    6  git add a b //adding file to staging area
+    7  git status
+       git config --global user.email "pranali.wagh@gmail.com"  //before commit
+   17  git config --global user.name "pranali"
+   18  git commit -m "first commit" // committed files  to LR
+   19  git status
+   20  git log // how many commit is done earlier
+   21  Make changes in file  git add a b (git commit -a -m “files changed”)
+   22  /*git commit -m "second version"
+   23  git status
+   24  git log
+      26  history
+
+
+27  git clone
+   28  git clone "https://github.com/pranalishelar12/test.git"
+   29  cd test
+   30  ls
+   31  cat f1
+     33  cat >> f1
+   34  ls
+   35  cat f1
+   36  git add .
+   37  git commit -"m  "updation in f1"
+git commit -m  "updation in f1"
+
+   38  git commit -m "udation in f1"
+   39  git log --oneline
+   40  git log
+   41  git push origin main
+   42  git push origin main
